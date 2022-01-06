@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pytorch CONV2D Shape Calculator</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/project.css">
+    <script src="js/main.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <main>
+        <h1>Pytorch CONV2D Shape Calculator</h1>
+        <h3>Only support square image and square convolution now</h3>
+        <div id="parameters">
+            <h4>Input</h4>
+            <div id="input_parameters">
+                
+
+                <label class="b">Batch Size<em></em><input type="range" min=1 max=256 step=1 value=64 width=256></input></label>
+
+                <label class="c1">Channels<em></em><input type="range" min=1 max=256 step=1 value=1 width=256></input></label>
+
+                <label class="h1">Height<em></em><input type="range" min=1 max=256 step=1 value=32 width=256></input></label>
+
+                <label class="w1">Width<em></em><input type="range" min=1 max=256 step=1 value=32 width=256></input></label>
+                
+                
+            </div>
+            <h4>Convolution Parameters</h4>
+            <div id="convolution_parameters">
+
+                <label class="c2">out_channels<em></em><input type="range" min=1 max=256 step=1 value=32 width=256></input></label>
+                <label class="k">kernel_size<em></em><input type="range" min=1 max=128 step=1 value=4></input></label>
+                <label class="s">stride<em></em><input type="range" min=1 max=10 step=1 value=1></input></label>
+                <label class="p">padding<em></em><input type="range" min=0 max=8 step=0 value=0></input></label>
+                <label class="d">dilation<em></em><input type="range" min=0 max=8 step=0 value=1></input></label>
+                <label class="g">groups<em></em><input type="range" min=0 max=8 step=0 value=1></input></label>
+
+            </div>
+            <div id="message"></div>
+        </div>
+        <h4>Shapes</h4>
+        <div id="shapes">
+            <div id="input"></div>
+            <div id="arrow">→</div>
+            <div id="output"></div>
+        </div>
+        <div id="credits">
+            Reference:<br/>
+            <a href=" https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html" target="_blank">Pytorch torch.nn.Conv2d</a><br/>
+            <a href="https://github.com/madebyollin/convnet-calculator" target="_blank">convnet-calculator</a>
+        </div>
+    </main>
+</body>
+
+</html>
